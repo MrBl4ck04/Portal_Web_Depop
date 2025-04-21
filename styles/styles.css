@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif; /* Updated font */
+  background-color: #111;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.hero-title {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif; /* Ensure title uses the new font */
+}
+
+.hero-subtitle {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 32px;
+  font-family: 'Montserrat', sans-serif; /* Ensure subtitle uses the new font */
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url('assets/hero-bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  animation: slideIn 1s ease-out;
+  position: absolute; // Ensure it's positioned correctly
+  top: 50%; // Center vertically
+  left: 50%; // Center horizontally
+  transform: translate(-50%, -50%); // Adjust for centering
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); }
+  to { transform: translateY(0); }
+}
+
+.hero-logo {
+  width: 120px;
+  margin-bottom: 24px;
+}
+
+.hero-title {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero-subtitle {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 32px;
+}
+
+.hero-cta {
+  background: #fff;
+  color: #000;
+  padding: 12px 32px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.hero-cta:hover {
+  background: #f44336;
+  color: #fff;
+}
+
+.gallery-section, .idea-section, .social-section, .testimonials-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.social-icons i {
+  font-size: 2rem;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+}
+
+.footer-section {
+  background-color: #222;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
