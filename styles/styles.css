@@ -2294,6 +2294,17 @@ body {
 .section-videodos, .section-imagedos {
   width: 35%; /* Ajusta el tamaño para que ambos elementos tengan el mismo ancho */
 }
+.section-videodos, .section-imagedos {
+  width: 40%; /* Ajusta el ancho para que ambos elementos tengan el mismo tamaño */
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.section-videodos:hover, .section-imagedos:hover {
+  transform: scale(1.02);
+}
 
 .product-images {
   display: flex;
