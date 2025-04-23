@@ -359,12 +359,17 @@ body {
     margin-bottom: 20px;
 }
 
-.section-videodos  {
-  display: block;
-  margin: 0 auto;
-  width: 50%;
+.section-videodos {
+  width: 10%;
   height: auto;
+  margin-right: 20px;
 }
+.section-image {
+  width: 100%;
+  height: auto;
+  margin-left: 20px;
+}
+
 .section-video, .section-videodos {
   border-radius: 10px;
   transition: transform 0.3s ease;
