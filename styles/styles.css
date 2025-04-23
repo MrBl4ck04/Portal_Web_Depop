@@ -1,7 +1,9 @@
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif; /* Updated font */
-  background-color: #111;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #000;
+  background-size: 100% 100%;
+  min-height: 100vh;
   color: #fff;
   overflow-x: hidden;
 }
@@ -12,14 +14,14 @@ body {
   margin-bottom: 16px;
   font-weight: bold;
   letter-spacing: 2px;
-  font-family: 'Montserrat', sans-serif; /* Ensure title uses the new font */
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Montserrat', sans-serif;
 }
 
 .hero-subtitle {
   color: #fff;
   font-size: 1.2rem;
   margin-bottom: 32px;
-  font-family: 'Montserrat', sans-serif; /* Ensure subtitle uses the new font */
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Montserrat', sans-serif;
 }
 
 .hero-section {
@@ -42,29 +44,30 @@ body {
   padding: 40px;
   border-radius: 16px;
   text-align: center;
-  animation: slideIn 1s ease-out;
-  position: absolute; // Ensure it's positioned correctly
-  top: 50%; // Center vertically
-  left: 50%; // Center horizontally
-  transform: translate(-50%, -50%); // Adjust for centering
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @keyframes slideIn {
-  from { transform: translateY(-50px); }
-  to { transform: translateY(0); }
+  from { transform: translate(-50%, -50%); }
+  to { transform: translate(-50%, -50%); }
 }
 
 .hero-logo {
-  width: 120px;
-  margin-bottom: 24px;
+  width: 600px;
+  margin: 0;
 }
 
 .hero-title {
   color: #fff;
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 16px;
-  font-weight: bold;
-  letter-spacing: 2px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: left;
 }
 
 .hero-subtitle {
@@ -88,9 +91,67 @@ body {
   color: #fff;
 }
 
-.gallery-section, .idea-section, .social-section, .testimonials-section {
+.gallery-section, .idea-section, .social-section, .testimonials-section, .content-section {
   padding: 60px 20px;
-  text-align: center;
+  text-align: left;
+}
+
+.content-section {
+  padding: 40px 20px 40px 60px;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-container h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  border-bottom: 4px solid #fff;
+  padding-bottom: 5px;
+}
+
+.section-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  color: #fff;
+  max-width: 80%;
+  font-weight: 400;
+  position: relative;
+  padding-left: 15px;
+}
+
+.section-text::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+}
+
+.section-image {
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.section-image:hover {
+  transform: scale(1.02);
 }
 
 .social-icons i {
@@ -104,7 +165,6 @@ body {
 }
 
 .footer-section {
-  background-color: #222;
   padding: 20px;
   text-align: center;
 }
@@ -124,4 +184,74 @@ body {
 
 .footer-links a:hover {
   text-decoration: underline;
+}
+
+/* Media Queries para diseño responsive */
+@media screen and (max-width: 1200px) {
+  .hero-logo {
+    width: 500px;
+  }
+  
+  .section-container h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-logo {
+    width: 400px;
+  }
+  
+  .hero-overlay {
+    padding: 30px;
+  }
+  
+  .section-container h2 {
+    font-size: 2rem;
+  }
+  
+  .section-text {
+    font-size: 1.1rem;
+  }
+  
+  .content-section {
+    padding: 30px 15px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-logo {
+    width: 280px;
+  }
+  
+  .hero-overlay {
+    padding: 20px;
+  }
+  
+  .section-container h2 {
+    font-size: 1.8rem;
+  }
+  
+  .section-text {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .content-section {
+    padding: 25px 10px;
+  }
+  
+  .section-image {
+    width: 95%;
+  }
+  
+  .footer-links a {
+    margin: 0 5px;
+    font-size: 0.9rem;
+  }
 }
