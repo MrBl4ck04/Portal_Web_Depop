@@ -230,10 +230,11 @@ body {
   max-width: 1000px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  margin: 20px 0;
+  margin: 20px auto; /* ← esto centra horizontalmente */
   display: block;
   transition: transform 0.3s ease;
 }
+
 .section-imagedos {
   width: 80%;
   max-width: 400px;
@@ -421,10 +422,11 @@ body {
     transform: translateY(-4px);
   }
 }.section-video {
-    width: 83.3%; /* Ajustable width */
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-    }
+  width: 83.3%; /* Ajustable width */
+  margin: 0 auto 20px; /* centra horizontalmente y mantiene el margen inferior */
+  transition: transform 0.3s ease;
+}
+
     
     .section-video:hover {
     transform: scale(1.02);
@@ -2305,6 +2307,9 @@ body {
 .section-videodos:hover, .section-imagedos:hover {
   transform: scale(1.02);
 }
+
+
+
 
 .product-images {
   display: flex;
