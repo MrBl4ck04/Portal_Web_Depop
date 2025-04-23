@@ -1,12 +1,51 @@
 body {
   margin: 0;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background: #000;
+  background: linear-gradient(135deg,
+    #4047ff,
+    #4d002c,
+    #fb6cc1,
+    #00c288,
+    #ec631c,
+    #f1c1db,
+    #1589cb,
+    #fec90a,
+    #ae85ff
+  );
   background-size: 100% 100%;
   min-height: 100vh;
   color: #fff;
   overflow-x: hidden;
 }
+/**! PALETA EN MOVIMIENTO */
+/**
+body {
+  margin: 0;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: linear-gradient(270deg,
+    #4047ff,
+    #4d002c,
+    #fb6cc1,
+    #00c288,
+    #ec631c,
+    #f1c1db,
+    #1589cb,
+    #fec90a,
+    #ae85ff
+  );
+  background-size: 1800% 1800%;
+  animation: gradientFlow 30s ease infinite;
+  min-height: 100vh;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+*/
 
 .hero-title {
   color: #fff;
